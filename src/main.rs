@@ -1,10 +1,11 @@
+mod table_builder;
+
 use datafusion::arrow::array::{Int32Array, RecordBatch};
 use datafusion::arrow::datatypes::{DataType, Field, Schema};
 use datafusion::arrow::error::ArrowError;
 use datafusion::datasource::MemTable;
 use datafusion::prelude::SessionContext;
 use std::sync::Arc;
-use tokio::runtime::Runtime;
 use tokio::time::{self, sleep, Duration};
 
 #[tokio::main]
